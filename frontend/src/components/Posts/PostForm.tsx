@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useAuthStore } from "../../store/authStore";
 import { createPost } from "../../services/postService";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
@@ -8,7 +7,6 @@ import "react-quill/dist/quill.snow.css";
 const PostForm: React.FC = () => {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
-  const { user } = useAuthStore();
   const navigate = useNavigate();
   const [image, setImage] = useState<any>(null);
   const [url, setUrl] = useState("");

@@ -8,7 +8,7 @@ import toast from "react-hot-toast";
 
 const CommentForm: React.FC<{ postId: string }> = ({ postId }) => {
   const [content, setContent] = useState("");
-  const { addComment, setComments } = useCommentStore();
+  const { setComments } = useCommentStore();
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
